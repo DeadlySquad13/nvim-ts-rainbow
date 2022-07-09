@@ -1,17 +1,18 @@
 ; inherits: square,round,curly
 
-[(jsx_opening_element
+;; [(jsx_opening_element
    name: (identifier) @left
-   attribute: (jsx_attribute (property_identifier) @left
-                             (string)))
- (jsx-extended-rainbow-mode?)]
+   ;; attribute: (jsx_attribute (property_identifier) @left
+   ;;                           (string)))
+ ;; (jsx-extended-rainbow-mode?)]
 
-"<" @left
-">" @right
+;; "<" @left
+;; ">" @right
 
 [(jsx_opening_element
    name: (identifier) @left)
  (jsx-extended-rainbow-mode?)]
 
-[(jsx_closing_element)
- (jsx-extended-rainbow-mode?)] @right
+[(jsx_closing_element
+   name: (identifier) @right)
+ (jsx-extended-rainbow-mode?)]
